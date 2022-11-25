@@ -1,7 +1,7 @@
 # 概要説明
 
 
-### 今回作成するもの
+### 作成するもの
 以下の図でいうサーバーサイドをAWSリソースで構築する
 <img src="image/アーキテクチャー図.png">
 <br>
@@ -148,7 +148,7 @@ aws cognito-idp admin-initiate-auth \
    --auth-parameters USERNAME=demoUser,PASSWORD=[新パスワード]
 ```
 
-## 2.RestAPIの動作確認
+## 2.REST APIの動作確認
 1. APIGatewayをデプロイしURLを取得する  
 ・APIGateway＞リソース＞アクションを押下  
 以下画像ではリソースのメソッドにOPTIONSの記載がありますがその点は無視でOKです
@@ -205,4 +205,9 @@ curl -X POST \
 1. リソース＞アクションにて「CORSの有効化」で必用な設定を行った後「CORSを有効にして既存のCORSヘッダーを置換」を押下  
 この設定を必用なアクセスポイントすべてに行う
 2. API のデプロイを行うとクライアント側からのリクエストを処理できる
+3. おまけ
+&ensp; 作成されたリソースに合わせクライアントアプリを準備  
+触るならREADMEの起動方法載せております。  
+(UI未考慮、バグありきの粗末なもの)↓  
+[AngularのクライアントアプリとAWSリソースを連携：お試し程度の画面 ](https://github.com/yomo-maki/demo-serverless-client)
 
